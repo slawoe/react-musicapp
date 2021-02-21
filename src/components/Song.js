@@ -3,7 +3,7 @@ const Song = () => {
     <div className="song-container">
       <img src="#" alt="Song" />
       <h2>Song Name</h2>
-      <p>Aritst</p>
+      <span>Aritst</span>
     </div>
   );
 };
