@@ -6,6 +6,8 @@ import {
   faAngleLeft,
   faAngleRight,
   faPause,
+  faForward,
+  faBackward,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
@@ -32,6 +34,12 @@ const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
     audioRef.current.currentTime = e.target.value;
     setSongInfo({ ...songInfo, currentTime: e.target.value });
   };
+  const fastForward = () => {
+    audioRef.current.currentTime += 10;
+  };
+  const fastBackward = () => {
+    audioRef.current.currentTime -= 10;
+  };
   return (
     <div className="player">
       <div className="time-control">
@@ -48,10 +56,20 @@ const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
       <div className="play-control">
         <FontAwesomeIcon className="skip-back" icon={faAngleLeft} size="2x" />
         <FontAwesomeIcon
+          className="fast-backward"
+          icon={faBackward}
+          onClick={fastBackward}
+        />
+        <FontAwesomeIcon
           onClick={playSongHandler}
           className="play"
           icon={!isPlaying ? faPlay : faPause}
           size="2x"
+        />
+        <FontAwesomeIcon
+          className="fast-forward"
+          icon={faForward}
+          onClick={fastForward}
         />
         <FontAwesomeIcon
           className="skip-forward"
