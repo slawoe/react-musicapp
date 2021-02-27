@@ -10,7 +10,7 @@ import {
   faBackward,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
+const Player = ({ currentSong, isPlaying, setIsPlaying, audioRef }) => {
   const [songInfo, setSongInfo] = useState({
     currentTime: 0,
     duration: 0,
