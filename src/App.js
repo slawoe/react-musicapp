@@ -9,6 +9,7 @@ import Library from "./components/Library";
 import data from "./util";
 
 function App() {
+  const audioRef = useRef(null);
   const [songs, setSongs] = useState(data());
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
