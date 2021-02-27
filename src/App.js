@@ -17,6 +17,11 @@ function App() {
     currentTime: 0,
     duration: 0,
   });
+  const timeUpdateHandler = (e) => {
+    const current = e.target.currentTime;
+    const duration = e.target.duration;
+    setSongInfo({ ...songInfo, currentTime: current, duration });
+  };
   return (
     <div className="App">
       <Song currentSong={currentSong} />
@@ -25,6 +30,8 @@ function App() {
         currentSong={currentSong}
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
+        setSongInfo={setSongInfo}
+        songInfo={songInfo}
       />
       <Library songs={songs} setCurrentSong={setCurrentSong} />
       <audio
