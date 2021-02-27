@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import "./styles/app.scss";
 
@@ -22,6 +22,12 @@ function App() {
         setIsPlaying={setIsPlaying}
       />
       <Library songs={songs} setCurrentSong={setCurrentSong} />
+      <audio
+        ref={audioRef}
+        onTimeUpdate={timeUpdateHandler}
+        onLoadedMetadata={timeUpdateHandler}
+        src={currentSong.audio}
+      />
     </div>
   );
 }
