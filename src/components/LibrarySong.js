@@ -1,7 +1,23 @@
-const LibrarySong = ({ song, songs, setCurrentSong, id }) => {
+const LibrarySong = ({
+  song,
+  songs,
+  setCurrentSong,
+  id,
+  audioRef,
+  isPlaying,
+}) => {
   const songSelectHandler = () => {
     setCurrentSong(song);
+    audioRef.current.play();
   };
+  if (isPlaying) {
+    const playPromise = audioRef.current.play();
+    if (playPromise !== undefined) {
+      playPromise.then((audio) => {
+        audioRef.current.play();
+      });
+    }
+  }
   return (
     <div onClick={songSelectHandler} className="library-song-container">
       <img src={song.cover} alt={`Song cover of ${song.name}`} />
