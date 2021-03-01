@@ -41,12 +41,12 @@ const Player = ({
         <span>{getTime(songInfo.currentTime)}</span>
         <input
           min={0}
-          max={songInfo.duration}
+          max={songInfo.duration || 0.0}
           value={songInfo.currentTime}
           onChange={dragHandler}
           type="range"
         ></input>
-        <span>{getTime(songInfo.duration)}</span>
+        <span>{getTime(songInfo.duration || 0.0)}</span>
       </div>
       <div className="play-control">
         <FontAwesomeIcon className="skip-back" icon={faAngleLeft} size="2x" />
