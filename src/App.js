@@ -7,7 +7,7 @@ import Song from "./components/Song";
 import Library from "./components/Library";
 import Nav from "./components/Nav";
 
-import data from "./util";
+import data from "./data";
 
 function App() {
   const audioRef = useRef(null);
