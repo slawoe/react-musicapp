@@ -2,7 +2,7 @@
 
 **THIS IS A NON-COMMERCIAL-PROJECT CREATED WITH REACT**
 
-Just a musicplayer apllication with normal player functionality.
+A musicplayer application with normal player functionality.
 
 Current version: 1.0 || 23.03.2021
 
