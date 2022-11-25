@@ -13,8 +13,7 @@ Current version: 1.0 || 23.03.2021
 
 ## 🖱 Deployment
 
-The app is deployed on Heroku and can be tested here:
-[Musicplayer](https://slawoe-musicapp.herokuapp.com/)
+Update 11/25/2022: Thanks to Salesforce wanting to make money on Heroku even with private projects and therefore eliminating Free Dynos as of 11/28/2022, this app is **TEMPORARILY OFFLINE**.
 
 ## 📲 Design and layout infos
 
